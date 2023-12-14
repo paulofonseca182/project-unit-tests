@@ -21,6 +21,5 @@ const createStudent = (param) => ({
   name: param,
   feedback: menssage,
 });
-console.log(createStudent('paulo'));
 
 module.exports = createStudent;

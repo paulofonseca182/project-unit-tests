@@ -42,4 +42,11 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
+const lo = productDetails('arroz', 'feijao');
+
+for (let i = 0; i < lo.length; i += 1) {
+  let response = lo[i].details.productId.match(/(...)$/);
+  console.log(response);
+}
+
 module.exports = productDetails;
