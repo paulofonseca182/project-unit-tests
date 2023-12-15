@@ -34,8 +34,28 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 0, sub: -1 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 0 ], [ 'sub', -1 ] ]
 */
 
-const calculator = (number1, number2) => {};
+const calculator = (number1, number2) => {
+  const resultSum = number1 + number2;
+  const resultMult = number1 * number2;
+  const resultDiv = Math.floor(number1 / number2);
+  const resultSub = number1 - number2;
 
-const arrayGenerator = (type, object) => {};
+  return {
+    sum: resultSum,
+    mult: resultMult,
+    div: resultDiv,
+    sub: resultSub,
+  };
+};
+
+const arrayGenerator = (type, object) => {
+  if (type === 'keys') {
+    return Object.keys(object);
+  } if (type === 'values') {
+    return Object.values(object);
+  } if (type === 'entries') {
+    return Object.entries(object);
+  }
+};
 
 module.exports = { calculator, arrayGenerator };
